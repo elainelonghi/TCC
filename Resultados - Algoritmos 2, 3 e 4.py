@@ -379,7 +379,7 @@ modelo_svm = SVC(kernel='linear', class_weight='balanced')
 resultados.append(avaliar_modelo("SVM", modelo_svm, X_train, y_train, X_test, y_test))
 
 # Exibir tabela resumida
-print("\n📊 Tabela Comparativa dos Modelos:")
+print("\n Tabela Comparativa dos Modelos:")
 for r in resultados:
     print(f"\n🔹 {r['Modelo']}")
     print(f"Acurácia: {r['Acurácia (%)']}%")
@@ -402,5 +402,6 @@ print(df_positivos)
 df_negativos = df_pesos.sort_values(by='Peso', ascending=True).head(10)
 print("\n🔍 Termos com maior influência negativa:")
 print(df_negativos)
+
 
 
